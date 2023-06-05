@@ -1,5 +1,6 @@
 # Data Structures and Algorithms
 
+
 ## Language: `JavaScript`
 
 ### Folder and Challenge Setup

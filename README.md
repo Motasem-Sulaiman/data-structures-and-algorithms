@@ -1,5 +1,8 @@
 # Data Structures and Algorithms
 
+ 1. [arrayReverse](./javascript/code-challenges/reverse-array/reverseArray.md)
+
+
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
 
 ## Repository Quick Tour and Usage
@@ -21,3 +24,8 @@ To run your tests
 ### 401 Data Structures, Code Challenges
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+
+
+
+
