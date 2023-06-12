@@ -6,6 +6,9 @@
 
 3. [linked-list](./javascript/linked-list/linked-list.md)
 
+4. [binary-search](./javascript/binarySearch/binary-search.md)
+
+
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
 
 ## Repository Quick Tour and Usage
