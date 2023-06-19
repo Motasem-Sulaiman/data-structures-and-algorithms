@@ -2,6 +2,14 @@
 
  1. [arrayReverse](./javascript/code-challenges/reverse-array/reverseArray.md)
 
+2. [array-insert-shift](./javascript/array-insert-shift/array-insert-shift.md)
+
+3. [linked-list](./javascript/linked-list/linked-list.md)
+
+4. [binary-search](./javascript/binarySearch/binary-search.md)
+
+5. [linked-list-insertions](./javascript/linked-list-insertions/linked-list-insertions.md)
+
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
 
