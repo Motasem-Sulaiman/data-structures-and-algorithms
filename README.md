@@ -8,6 +8,8 @@
 
 4. [binary-search](./javascript/binarySearch/binary-search.md)
 
+5. [linked-list-insertions](./javascript/linked-list-insertions/linked-list-insertions.md)
+
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
 
