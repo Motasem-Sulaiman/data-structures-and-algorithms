@@ -20,7 +20,7 @@ class linkedList {
       current = current.next;
     }
     current.next = newNode;
-  
+
     return;
   }
   insertBefore(value, newValue) {
@@ -79,8 +79,30 @@ class linkedList {
       current = current.next;
     }
   }
+  //////////////////////////////// challenge 7
+  kth(k) {
+    let size = 0;
+    let current = this.head;
+    while (current) {
+      size++;
+      current = current.next;
+    }
+    let newSize = size - k;
 
-  
+    current = this.head;
+    let count = 0;
+    while (current) {
+      count++;
+      if (newSize === count) {
+        return("the value is", current.value);
+      }
+
+      current = current.next;
+    }
+    if (k > size || k < size) {
+      return "kth not found";
+    }
+  }
 }
 
-module.exports=linkedList;
+module.exports = linkedList;
