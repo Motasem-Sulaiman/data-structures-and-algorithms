@@ -94,7 +94,7 @@ class linkedList {
     while (current) {
       count++;
       if (newSize === count) {
-        return("the value is", current.value);
+        return "the value is", current.value;
       }
 
       current = current.next;
@@ -103,8 +103,33 @@ class linkedList {
       return "kth not found";
     }
   }
-
-  ///////////////////////////////////////challenge 8
 }
 
-module.exports = linkedList;
+///////////////////////////////////////challenge 8
+
+class newLinkedList {
+  constructor(link1, link2) {
+    this.link1 = link1;
+    this.link2 = link2;
+  }
+  linkedListZip() {
+    let current1 = this.link1.head;
+    let current2 = this.link2.head;
+    let link3 = new linkedList();
+
+    while (current1 || current2) {
+      if (current1) {
+        link3.addLast(current1.value);
+        current1 = current1.next;
+      }
+      if (current2) {
+        link3.addLast(current2.value);
+        current2 = current2.next;
+      }
+    }
+
+    return link3;
+  }
+}
+
+module.exports = {linkedList,newLinkedList};
