@@ -94,7 +94,7 @@ class linkedList {
     while (current) {
       count++;
       if (newSize === count) {
-        return("the value is", current.value);
+        return "the value is", current.value;
       }
 
       current = current.next;
@@ -105,4 +105,81 @@ class linkedList {
   }
 }
 
-module.exports = linkedList;
+///////////////////////////////////////challenge 8
+
+class newLinkedList {
+  constructor(link1, link2) {
+    this.link1 = link1;
+    this.link2 = link2;
+  }
+  linkedListZip() {
+    let current1 = this.link1.head;
+    let current2 = this.link2.head;
+    let link3 = new linkedList();
+
+    while (current1 || current2) {
+      if (current1) {
+        link3.addLast(current1.value);
+        current1 = current1.next;
+      }
+      if (current2) {
+        link3.addLast(current2.value);
+        current2 = current2.next;
+      }
+    }
+
+    return link3;
+  }
+}
+
+/////////////////////////////////////////////challenge 10
+class Stack {
+  constructor() {
+    this.top = null;
+    this.length = 0;
+  }
+  isEmpty() {
+    if (this.top === null) {
+      return true;
+    } else {
+      return false;
+    }
+
+
+  }
+
+  push(value) {
+    if (this.isEmpty()) {
+      const newNode = new Node(value);
+      this.top = newNode;
+      this.length++;
+    } else {
+      const newNode = new Node(value);
+      newNode.next = this.top;
+      this.top = newNode;
+      this.length++;
+    }
+  }
+  pop() {
+    if (this.isEmpty()) {
+      console.log("empty stack");
+      return false;
+    }
+    const temp = this.top;
+    this.top = this.top.next;
+    temp.next = null;
+    this.length--;
+    return temp.value;
+  }
+
+  peek() {
+    if (this.isEmpty()) {
+      return "sorry stack is empty";
+    }
+    return this.top.value;
+  }
+}
+
+
+
+module.exports = { linkedList, newLinkedList,Stack };
