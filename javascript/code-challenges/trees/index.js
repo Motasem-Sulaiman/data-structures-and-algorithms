@@ -41,4 +41,50 @@ class BinaryTree {
     traverse(this.root);
     return result;
   }
+  isEmpty() {
+    return this.root === null;
+  }
+  add(value) {
+    const newNode = new Node(value);
+    if (this.isEmpty()) {
+      this.root = newNode;
+    } else {
+      this.insertNode(this.root, newNode);
+    }
+  }
+  insertNode(root, newNode) {
+    if (newNode.value < root.value) {
+      if (root.left === null) {
+        root.left = newNode;
+      } else {
+        this.insertNode(root.left, newNode);
+      }
+    } else {
+      if (root.right === null) {
+        root.right = newNode;
+      } else {
+        this.insertNode(root.right, newNode);
+      }
+    }
+  }
+  contains(value) {
+    return this.containsNode(this.root, value);
+  }
+
+  containsNode(node, value) {
+    if (!node) {
+      return false;
+    }
+
+    if (node.value === value) {
+      return true;
+    }
+
+    if (value < node.value) {
+      return this.containsNode(node.left, value);
+    } else {
+      return this.containsNode(node.right, value);
+    }
+  }
 }
+module.exports={Node,BinaryTree}
