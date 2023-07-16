@@ -103,4 +103,17 @@ describe("Binary Tree", () => {
     expect(tree.contains(8)).toBe(false);
     expect(tree.contains(25)).toBe(false);
   });
+  it("Return the max value in the tree", () => {
+    tree.add(10);
+    tree.add(5);
+    tree.add(15);
+    tree.add(3);
+    tree.add(7);
+    tree.add(12);
+    tree.add(20);
+    tree.add(90);
+
+    expect(tree.getMax()).toBe(90);
+    
+  });
 });
