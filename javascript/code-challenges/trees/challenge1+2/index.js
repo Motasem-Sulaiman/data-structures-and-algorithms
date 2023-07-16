@@ -86,5 +86,18 @@ class BinaryTree {
       return this.containsNode(node.right, value);
     }
   }
+  /////////////////////////////////////////////challange 16
+  getMax() {
+    let maxNum = this.root;
+    let traverse = (node) => {
+      if (node.value > maxNum.value) {
+        maxNum = node;
+      }
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    };
+    traverse(this.root);
+    return maxNum.value;
+  }
 }
 module.exports={Node,BinaryTree}
