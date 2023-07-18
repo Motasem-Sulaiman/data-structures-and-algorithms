@@ -1,6 +1,7 @@
 "use strict";
 const { BinaryTree } = require("../index");
 const { Node } = require("../index");
+const { breadthFirst } = require("../index");
 
 let tree = null;
 
@@ -114,6 +115,29 @@ describe("Binary Tree", () => {
     tree.add(90);
 
     expect(tree.getMax()).toBe(90);
+    
+  });
+  it("return array in breadth-first traversal", () => {
+    let one = new Node(1);
+    let two = new Node(2);
+    let three = new Node(3);
+    let four = new Node(4);
+    let five = new Node(5);
+    let six = new Node(6);
+    let seven = new Node(7);
+    let eight = new Node(8);
+    let nine = new Node(9);
+    one.left = two;
+    one.right = three;
+    two.left = six;
+    three.left = four;
+    three.right = five;
+    six.right = seven;
+    seven.left = eight;
+    seven.right = nine;
+    tree = new BinaryTree(one);
+
+    expect(breadthFirst(one)).toStrictEqual([1, 2, 3, 6, 4, 5, 7, 8, 9]);
     
   });
 });

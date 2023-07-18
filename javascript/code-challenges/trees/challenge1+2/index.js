@@ -100,4 +100,22 @@ class BinaryTree {
     return maxNum.value;
   }
 }
-module.exports={Node,BinaryTree}
+
+////////////////////////////////////////////// challenge 17
+function breadthFirst(tree) {
+  let result = [];
+  let newArr = [tree];
+
+  while (newArr.length > 0) {
+    let values = newArr.shift();
+    result.push(values.value);
+    if (values.left) {
+      newArr.push(values.left);
+    }
+    if (values.right) {
+      newArr.push(values.right);
+    }
+  }
+  return result;
+}
+module.exports = { Node, BinaryTree,breadthFirst };
